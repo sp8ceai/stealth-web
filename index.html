@@ -9,8 +9,7 @@
     <!-- SEO Meta Tags (Edit later) -->
     <meta name="description"
         content="Exploring the boundaries of automation, intelligence, and mission-critical operations in a way that is never been done before." />
-    <meta name="keywords"
-        content="SP8CEAi, robotics, AI, digital twin, NVIDIA inception program, stealth startup" />
+    <meta name="keywords" content="SP8CEAi, robotics, AI, digital twin, NVIDIA inception program, stealth startup" />
     <meta name="author" content="SP8CEAi Corp." />
     <meta property="og:title" content="Unlocking the power of AI and robotics" />
     <meta property="og:description"
@@ -38,9 +37,13 @@
 
     <!-- Top Logo and Demo Button -->
     <header class="w-full px-6 py-4">
-        <div class="max-w-screen-2xl mx-auto flex items-center justify-between">
-            <img src="images/logo.png" alt="SP8CEAi Logo" class="h-10 w-auto">
-            <a href="demo.html" target="_blank" class="text-sm font-bold bg-black text-white px-5 py-2 rounded-md hover:bg-gray-800 transition">
+        <div class="max-w-screen-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-4">
+                <img src="images/logo.png" alt="SP8CEAi Logo" class="h-10 w-auto" />
+                <img src="images/nvidia.png" alt="NVIDIA Logo" class="h-16 w-auto" />
+            </div>
+            <a href="demo.html" target="_blank"
+                class="text-sm font-bold bg-black text-white px-5 py-2 rounded-md hover:bg-gray-800 transition">
                 Demo
             </a>
         </div>
@@ -116,9 +119,18 @@
     <!-- Footer -->
     <footer class="bg-white border-t border-gray-200 text-center py-8 px-4 text-sm text-gray-600">
         <div class="max-w-screen-md mx-auto space-y-2">
-            <p><strong>SP8CEAi Corp.</strong></p>
-            <p>26 Broadway FL 8,<br>NY, NY 10004,<br>U.S.A.</p>
-            <p class="pt-4 text-gray-500">© SP8CEAi Corp. 2024 (All Rights Reserved)</p>
+            <div class="max-w-md mx-auto space-y-2">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="mb-0"><strong>SP8CEAi Corp.</strong></p>
+                        <p class="mb-0 text-sm">26 Broadway FL 8,<br>NY, NY 10004,<br>U.S.A.</p>
+                    </div>
+                    <div>
+                        <img src="images/nvidia.png" alt="NVIDIA Logo" class="h-16 w-auto">
+                    </div>
+                </div>
+                <p class="pt-2 text-center text-gray-500 text-xs">© SP8CEAi Corp. 2024 (All Rights Reserved)</p>
+            </div>
         </div>
     </footer>
 
