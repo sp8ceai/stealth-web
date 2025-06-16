@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Access</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // SHA-256 hash of your real password ("demo123" in this case)
+        const PASSWORD_HASH = "2e50885259af72689b9d2458233757d69c9aa4977a8390593d2406d4c7433a03";
+
+        async function hash(input) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(input);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            return Array.from(new Uint8Array(hashBuffer))
+                .map(b => b.toString(16).padStart(2, '0'))
+                .join('');
+        }
+
+        async function verifyPassword() {
+            if (sessionStorage.getItem("authenticated") === "true") return;
+
+            const input = prompt("Enter password to access this page:");
+            if (!input) {
+                document.body.innerHTML = "<div style='text-align:center; margin-top:20%; font-family:sans-serif; font-size:1.5rem;'>Access Denied</div>";
+                throw new Error("No input");
+            }
+
+            const hashedInput = await hash(input);
+            if (hashedInput !== PASSWORD_HASH) {
+                document.body.innerHTML = "<div style='text-align:center; margin-top:20%; font-family:sans-serif; font-size:1.5rem;'>Access Denied</div>";
+                throw new Error("Incorrect password");
+            }
+
+            sessionStorage.setItem("authenticated", "true");
+        }
+
+        // Run immediately
+        verifyPassword();
+    </script>
+</head>
+
+<body class="bg-black text-white flex items-center justify-center min-h-screen px-4">
+
+    <div class="text-center space-y-16">
+        <!-- DEMO PLATFORM -->
+        <div>
+            <div class="inline-block border border-white px-6 py-2 font-bold tracking-wide uppercase">
+                <a href="https://totemic-chimera-453715-d2.web.app/">Demo Platform</a>
+            </div>
+            <div class="mt-4 text-lg leading-relaxed">
+                <p><strong>Login:</strong> demo@sp8ce.ai</p>
+                <p><strong>Pass:</strong> password</p>
+            </div>
+        </div>
+
+        <!-- DIGITAL TWIN SKILL DEMO -->
+        <div>
+            <div class="inline-block border border-white px-6 py-2 font-bold tracking-wide uppercase">
+                <a href="https://drive.google.com/file/d/1DPkUQ8jwjTvSvvsGR1CFP_G_hOk5ZOcm/view?usp=sharing"
+                    target="_blank">Digital Twin Skill Demo</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

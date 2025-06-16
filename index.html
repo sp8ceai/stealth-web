@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stealth Startup</title>
+
+    <!-- SEO Meta Tags (Edit later) -->
+    <meta name="description"
+        content="Exploring the boundaries of automation, intelligence, and mission-critical operations in a way that is never been done before." />
+    <meta name="keywords"
+        content="SP8CEAi, robotics, AI, digital twin, NVIDIA inception program, stealth startup" />
+    <meta name="author" content="SP8CEAi Corp." />
+    <meta property="og:title" content="Unlocking the power of AI and robotics" />
+    <meta property="og:description"
+        content="A stealth-mode initiative pushing the frontier of intelligent robotics and automated decision systems." />
+    <meta property="og:image" content="https://www.sp8ce.ai/images/logo.png" />
+    <meta property="og:url" content="https://www.sp8ce.ai" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .hero-bg {
+            background-image: url('images/hero.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <!-- Top Logo and Demo Button -->
+    <header class="w-full px-6 py-4">
+        <div class="max-w-screen-2xl mx-auto flex items-center justify-between">
+            <img src="images/logo.png" alt="SP8CEAi Logo" class="h-10 w-auto">
+            <a href="demo.html" target="_blank" class="text-sm font-bold bg-black text-white px-5 py-2 rounded-md hover:bg-gray-800 transition">
+                Demo
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="w-full min-h-[calc(100vh-80px)] hero-bg flex items-center justify-center px-4">
+        <div
+            class="bg-white/80 rounded-2xl shadow-lg p-12 w-full max-w-5xl flex flex-col lg:flex-row items-center justify-between gap-12">
+
+            <!-- Left: Text -->
+            <div class="w-full lg:w-1/2 space-y-8 text-left">
+                <div class="text-sm tracking-widest text-gray-600 font-semibold">
+                    We're in stealth. Stay tuned.
+                </div>
+                <h1 class="text-6xl font-extrabold leading-tight">
+                    Unlocking the power of AI and Robotics
+                </h1>
+                <p class="text-xl text-gray-700 font-medium max-w-xl">
+                    More coming soon...
+                </p>
+            </div>
+
+            <!-- Right: Styled Form -->
+            <div class="w-full lg:w-1/2">
+                <form action="https://formspree.io/f/mblyywbb" method="POST"
+                    class="bg-white rounded-lg shadow p-6 space-y-4 w-full">
+                    <!-- Name Fields -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex-1">
+                            <label for="first-name" class="block text-sm font-semibold text-gray-700 mb-1">First Name
+                                <span class="text-red-500">*</span></label>
+                            <input type="text" id="first-name" name="first_name" required
+                                class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-black" />
+                        </div>
+                        <div class="flex-1">
+                            <label for="last-name" class="block text-sm font-semibold text-gray-700 mb-1">Last
+                                Name</label>
+                            <input type="text" id="last-name" name="last_name"
+                                class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-black" />
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Email <span
+                                class="text-red-500">*</span></label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-black" />
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-gray-700 mb-1">Message <span
+                                class="text-red-500">*</span></label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div>
+                        <button type="submit"
+                            class="mt-2 w-full bg-black text-white font-bold py-3 px-6 rounded-md hover:bg-gray-800 transition">
+                            Register Interest
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 text-center py-8 px-4 text-sm text-gray-600">
+        <div class="max-w-screen-md mx-auto space-y-2">
+            <p><strong>SP8CEAi Corp.</strong></p>
+            <p>26 Broadway FL 8,<br>NY, NY 10004,<br>U.S.A.</p>
+            <p class="pt-4 text-gray-500">© SP8CEAi Corp. 2024 (All Rights Reserved)</p>
+        </div>
+    </footer>
+
+    <script>
+        function notify() {
+            alert("Thanks for your interest! We'll notify you when we're ready.");
+        }
+    </script>
+</body>
+
+</html>
